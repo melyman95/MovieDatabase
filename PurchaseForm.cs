@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace MovieDatabase
 {
-    public partial class BuyMovieForm : Form
+    public partial class PurchaseForm : Form
     {
-        public BuyMovieForm()
+        public PurchaseForm()
         {
             InitializeComponent();
-        }
-
-        private void buyButton_Click(object sender, EventArgs e)
-        {
-            PurchaseForm form = new PurchaseForm();
-            form.Show();
         }
     }
 }

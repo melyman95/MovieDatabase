@@ -79,7 +79,7 @@ namespace MovieDatabase
             // 
             this.picBox.Image = global::MovieDatabase.Properties.Resources.camera;
             this.picBox.InitialImage = global::MovieDatabase.Properties.Resources.camera;
-            this.picBox.Location = new System.Drawing.Point(190, 177);
+            this.picBox.Location = new System.Drawing.Point(190, 149);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(161, 210);
             this.picBox.TabIndex = 4;
