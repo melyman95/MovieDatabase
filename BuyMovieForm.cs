@@ -21,6 +21,11 @@ namespace MovieDatabase
         {
             PurchaseForm form = new PurchaseForm();
             form.Show();
+        } 
+
+        private void BuyMovieForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
