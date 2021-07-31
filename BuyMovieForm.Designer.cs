@@ -37,16 +37,19 @@ namespace MovieDatabase
             // movieListBox
             // 
             this.movieListBox.FormattingEnabled = true;
-            this.movieListBox.Location = new System.Drawing.Point(98, 63);
+            this.movieListBox.Location = new System.Drawing.Point(65, 41);
+            this.movieListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.movieListBox.Name = "movieListBox";
-            this.movieListBox.Size = new System.Drawing.Size(213, 28);
+            this.movieListBox.Size = new System.Drawing.Size(143, 21);
             this.movieListBox.TabIndex = 0;
+            this.movieListBox.SelectedIndexChanged += new System.EventHandler(this.movieListBox_SelectedIndexChanged);
             // 
             // buyButton
             // 
-            this.buyButton.Location = new System.Drawing.Point(98, 144);
+            this.buyButton.Location = new System.Drawing.Point(65, 94);
+            this.buyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buyButton.Name = "buyButton";
-            this.buyButton.Size = new System.Drawing.Size(218, 70);
+            this.buyButton.Size = new System.Drawing.Size(145, 45);
             this.buyButton.TabIndex = 1;
             this.buyButton.Text = "Buy";
             this.buyButton.UseVisualStyleBackColor = true;
@@ -54,12 +57,13 @@ namespace MovieDatabase
             // 
             // BuyMovieForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 240);
+            this.ClientSize = new System.Drawing.Size(287, 156);
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.movieListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "BuyMovieForm";
             this.Text = "Buy Movie";
             this.ResumeLayout(false);
