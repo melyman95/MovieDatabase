@@ -38,25 +38,28 @@ namespace MovieDatabase
             // movieListBox
             // 
             this.movieListBox.FormattingEnabled = true;
-            this.movieListBox.Location = new System.Drawing.Point(132, 95);
+            this.movieListBox.Location = new System.Drawing.Point(88, 62);
+            this.movieListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.movieListBox.Name = "movieListBox";
-            this.movieListBox.Size = new System.Drawing.Size(274, 28);
+            this.movieListBox.Size = new System.Drawing.Size(184, 21);
             this.movieListBox.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 60);
+            this.label1.Location = new System.Drawing.Point(148, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Movie List";
             // 
             // movieInfoButton
             // 
-            this.movieInfoButton.Location = new System.Drawing.Point(202, 162);
+            this.movieInfoButton.Location = new System.Drawing.Point(135, 105);
+            this.movieInfoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.movieInfoButton.Name = "movieInfoButton";
-            this.movieInfoButton.Size = new System.Drawing.Size(125, 48);
+            this.movieInfoButton.Size = new System.Drawing.Size(83, 31);
             this.movieInfoButton.TabIndex = 2;
             this.movieInfoButton.Text = "Info";
             this.movieInfoButton.UseVisualStyleBackColor = true;
@@ -64,15 +67,17 @@ namespace MovieDatabase
             // 
             // GetMovieForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 251);
+            this.ClientSize = new System.Drawing.Size(364, 163);
             this.Controls.Add(this.movieInfoButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.movieListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "GetMovieForm";
             this.Text = "Preview Movie";
+            this.Load += new System.EventHandler(this.GetMovieForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

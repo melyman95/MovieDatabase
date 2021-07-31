@@ -21,5 +21,30 @@ namespace MovieDatabase
         {
 
         }
+
+
+        private void movieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GetMovieForm_Load(object sender, EventArgs e)
+        {
+
+            MovieContext context = new MovieContext();
+
+            //Had to set the title property in movie as a key since it doesnt have one.
+
+            List<Movie> movieTitles =
+                (from m in context.Movies
+                 orderby m.Title
+                 select m).ToList();
+
+
+            movieListBox.DataSource = movieTitles;
+            movieListBox.DisplayMember = "Title";
+
+        }
+
     }
 }
