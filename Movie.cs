@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace MovieDatabase
 {
-    class Movie
+    public class Movie
     {
+        [Key]
         public string Title { get; set; }
 
         public int releaseYear { get; set; }
