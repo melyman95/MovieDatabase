@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using System.Windows.Forms.Design;
+using System.Text.RegularExpressions;
 
 namespace MovieDatabase
 {
@@ -19,7 +20,7 @@ namespace MovieDatabase
             InitializeComponent();
         }
 
-        public bool ValidateMovie()
+        public bool MovieNotEmpty()
         {
             //validation
             foreach (var control in Controls)
@@ -38,10 +39,45 @@ namespace MovieDatabase
             return true;
         }
 
+        public bool ValidYear()
+        {
+            int year = 0;
+            if (!int.TryParse(releaseYearBox.Text, out year))
+            {
+                ErrorProvider yearError = new ErrorProvider();
+                yearError.SetError(releaseYearBox, "Invalid year. Enter a year. e.g. 1999");
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidRunTime()
+        {
+            int runtime = 0;
+            if (!int.TryParse(runtimeBox.Text, out runtime))
+            {
+                ErrorProvider runTimeError = new ErrorProvider();
+                runTimeError.SetError(runtimeBox, "Invalid runtime. Enter a whole number.");
+                return false;
+            }
+            return true;
+        }
+
+        public bool ValidPrice()
+        {
+            if (!decimal.TryParse(priceBox.Text, out decimal price))
+            {
+                ErrorProvider priceError = new ErrorProvider();
+                priceError.SetError(priceBox, "Invalid price. Enter a decimal number. e.g. 29.99");
+                return false;
+            }
+            return true;
+        }
+
         private void addMovieButton_Click(object sender, EventArgs e)
         {
             //validation
-            if (ValidateMovie())
+            if (MovieNotEmpty() && ValidYear() && ValidPrice())
             {
                 //creating database context to add movie object
                 MovieContext context = new MovieContext();
