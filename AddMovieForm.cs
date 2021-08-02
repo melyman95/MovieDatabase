@@ -77,7 +77,7 @@ namespace MovieDatabase
         private void addMovieButton_Click(object sender, EventArgs e)
         {
             //validation
-            if (MovieNotEmpty() && ValidYear() && ValidPrice())
+            if (MovieNotEmpty() && ValidYear() && ValidPrice() && ValidRunTime())
             {
                 //creating database context to add movie object
                 MovieContext context = new MovieContext();
