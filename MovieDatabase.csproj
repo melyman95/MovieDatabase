@@ -101,6 +101,10 @@
     <Compile Include="Migrations\202107311959026_CreateMovies.designer.cs">
       <DependentUpon>202107311959026_CreateMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108021916505_BuyMovieFormFix.cs" />
+    <Compile Include="Migrations\202108021916505_BuyMovieFormFix.designer.cs">
+      <DependentUpon>202108021916505_BuyMovieFormFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieContext.cs" />
@@ -130,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107311959026_CreateMovies.resx">
       <DependentUpon>202107311959026_CreateMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108021916505_BuyMovieFormFix.resx">
+      <DependentUpon>202108021916505_BuyMovieFormFix.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
