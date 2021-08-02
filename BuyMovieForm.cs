@@ -25,6 +25,16 @@ namespace MovieDatabase
 
         private void BuyMovieForm_Load(object sender, EventArgs e)
         {
+            //moved to BuyMovieForm_Load_1 because it doesn't work here but works there for some reason?
+        }
+
+        private void movieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BuyMovieForm_Load_1(object sender, EventArgs e)
+        {
             MovieContext context = new MovieContext();
 
             //Had to set the title property in movie as a key since it doesnt have one.
@@ -37,11 +47,6 @@ namespace MovieDatabase
 
             movieListBox.DataSource = movieTitles;
             movieListBox.DisplayMember = "Title";
-        }
-
-        private void movieListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

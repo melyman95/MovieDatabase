@@ -38,7 +38,7 @@ namespace MovieDatabase
             // 
             this.movieListBox.FormattingEnabled = true;
             this.movieListBox.Location = new System.Drawing.Point(65, 41);
-            this.movieListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.movieListBox.Margin = new System.Windows.Forms.Padding(2);
             this.movieListBox.Name = "movieListBox";
             this.movieListBox.Size = new System.Drawing.Size(143, 21);
             this.movieListBox.TabIndex = 0;
@@ -47,7 +47,7 @@ namespace MovieDatabase
             // buyButton
             // 
             this.buyButton.Location = new System.Drawing.Point(65, 94);
-            this.buyButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buyButton.Margin = new System.Windows.Forms.Padding(2);
             this.buyButton.Name = "buyButton";
             this.buyButton.Size = new System.Drawing.Size(145, 45);
             this.buyButton.TabIndex = 1;
@@ -63,9 +63,10 @@ namespace MovieDatabase
             this.Controls.Add(this.buyButton);
             this.Controls.Add(this.movieListBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BuyMovieForm";
             this.Text = "Buy Movie";
+            this.Load += new System.EventHandler(this.BuyMovieForm_Load_1);
             this.ResumeLayout(false);
 
         }
