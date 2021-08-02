@@ -45,6 +45,7 @@ namespace MovieDatabase
                  select m).ToList();
 
 
+
             movieListBox.DataSource = movieTitles;
             movieListBox.DisplayMember = "Title";
             // for some reason this works but putting this in buyMovieForm_Load doesn't work.
