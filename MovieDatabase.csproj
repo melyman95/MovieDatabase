@@ -91,6 +91,7 @@
       <DependentUpon>BuyMovieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs" />
+    <Compile Include="CustomerContext.cs" />
     <Compile Include="GetMovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
