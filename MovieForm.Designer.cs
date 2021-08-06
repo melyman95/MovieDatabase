@@ -35,6 +35,7 @@ namespace MovieDatabase
             this.buyMovieButton = new System.Windows.Forms.Button();
             this.dataBaseProgress = new System.Windows.Forms.ProgressBar();
             this.picBox = new System.Windows.Forms.PictureBox();
+            this.newCustomerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +86,21 @@ namespace MovieDatabase
             this.picBox.TabIndex = 4;
             this.picBox.TabStop = false;
             // 
+            // newCustomerButton
+            // 
+            this.newCustomerButton.Location = new System.Drawing.Point(168, 34);
+            this.newCustomerButton.Name = "newCustomerButton";
+            this.newCustomerButton.Size = new System.Drawing.Size(217, 74);
+            this.newCustomerButton.TabIndex = 5;
+            this.newCustomerButton.Text = "New Customer";
+            this.newCustomerButton.UseVisualStyleBackColor = true;
+            // 
             // MovieForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 685);
+            this.Controls.Add(this.newCustomerButton);
             this.Controls.Add(this.picBox);
             this.Controls.Add(this.dataBaseProgress);
             this.Controls.Add(this.buyMovieButton);
@@ -110,6 +121,7 @@ namespace MovieDatabase
         private System.Windows.Forms.Button buyMovieButton;
         private System.Windows.Forms.ProgressBar dataBaseProgress;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button newCustomerButton;
     }
 }
 
