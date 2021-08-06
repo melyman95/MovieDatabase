@@ -98,19 +98,6 @@
     <Compile Include="GetMovieForm.Designer.cs">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202107311959026_CreateMovies.cs" />
-    <Compile Include="Migrations\202107311959026_CreateMovies.designer.cs">
-      <DependentUpon>202107311959026_CreateMovies.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108021858064_nullInt.cs" />
-    <Compile Include="Migrations\202108021858064_nullInt.designer.cs">
-      <DependentUpon>202108021858064_nullInt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108021927043_test.cs" />
-    <Compile Include="Migrations\202108021927043_test.designer.cs">
-      <DependentUpon>202108021927043_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieContext.cs" />
     <Compile Include="MovieForm.cs">
@@ -120,6 +107,8 @@
       <DependentUpon>MovieForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieReg.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseForm.cs">
@@ -136,15 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GetMovieForm.resx">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202107311959026_CreateMovies.resx">
-      <DependentUpon>202107311959026_CreateMovies.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108021858064_nullInt.resx">
-      <DependentUpon>202108021858064_nullInt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108021927043_test.resx">
-      <DependentUpon>202108021927043_test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>

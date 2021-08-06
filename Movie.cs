@@ -18,7 +18,7 @@ namespace MovieDatabase
 
         public string Genre { get; set; }
 
-        public int? Runtime { get; set; }
+        public int Runtime { get; set; }
 
         public decimal Price { get; set; }
 
