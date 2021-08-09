@@ -19,8 +19,24 @@ namespace MovieDatabase
 
         private void buyButton_Click(object sender, EventArgs e)
         {
-            PurchaseForm form = new PurchaseForm();
-            form.Show();
+            MovieContext context = new MovieContext();
+
+
+            var deletedMovie = context.Movies.Where(m => m.Title == movieListBox.Text).FirstOrDefault();
+            context.Movies.Remove(deletedMovie);
+            context.SaveChanges();
+
+
+
+
+
+            DialogResult confirm = MessageBox.Show(movieListBox.Text + " was delted!");
+            this.Close();
+
+
+
+
+
         } 
 
         private void BuyMovieForm_Load(object sender, EventArgs e)
@@ -35,6 +51,7 @@ namespace MovieDatabase
 
         private void BuyMovieForm_Load_1(object sender, EventArgs e)
         {
+            movieListBox.DataSource = null; 
             MovieContext context = new MovieContext();
 
             //Had to set the title property in movie as a key since it doesnt have one.
@@ -44,9 +61,15 @@ namespace MovieDatabase
                  orderby m.Title
                  select m).ToList();
 
-
             movieListBox.DataSource = movieTitles;
+
             movieListBox.DisplayMember = "Title";
+        }
+
+        private void noButton_Click(object sender, EventArgs e)
+        {
+            DialogResult confirm = MessageBox.Show("Maybe next time");
+            this.Close();
         }
     }
 }
