@@ -41,9 +41,10 @@ namespace MovieDatabase
             // 
             // addMovieButton
             // 
-            this.addMovieButton.Location = new System.Drawing.Point(64, 555);
+            this.addMovieButton.Location = new System.Drawing.Point(43, 361);
+            this.addMovieButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addMovieButton.Name = "addMovieButton";
-            this.addMovieButton.Size = new System.Drawing.Size(181, 78);
+            this.addMovieButton.Size = new System.Drawing.Size(121, 51);
             this.addMovieButton.TabIndex = 0;
             this.addMovieButton.Text = "Add Movie";
             this.addMovieButton.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@ namespace MovieDatabase
             // 
             // getMovieButton
             // 
-            this.getMovieButton.Location = new System.Drawing.Point(295, 555);
+            this.getMovieButton.Location = new System.Drawing.Point(197, 361);
+            this.getMovieButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.getMovieButton.Name = "getMovieButton";
-            this.getMovieButton.Size = new System.Drawing.Size(181, 78);
+            this.getMovieButton.Size = new System.Drawing.Size(121, 51);
             this.getMovieButton.TabIndex = 1;
             this.getMovieButton.Text = "Get Movie";
             this.getMovieButton.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@ namespace MovieDatabase
             // 
             // buyMovieButton
             // 
-            this.buyMovieButton.Location = new System.Drawing.Point(180, 439);
+            this.buyMovieButton.Location = new System.Drawing.Point(120, 285);
+            this.buyMovieButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buyMovieButton.Name = "buyMovieButton";
-            this.buyMovieButton.Size = new System.Drawing.Size(181, 78);
+            this.buyMovieButton.Size = new System.Drawing.Size(121, 51);
             this.buyMovieButton.TabIndex = 2;
             this.buyMovieButton.Text = "Buy Movie";
             this.buyMovieButton.UseVisualStyleBackColor = true;
@@ -71,35 +74,39 @@ namespace MovieDatabase
             // 
             // dataBaseProgress
             // 
-            this.dataBaseProgress.Location = new System.Drawing.Point(455, 650);
+            this.dataBaseProgress.Location = new System.Drawing.Point(303, 422);
+            this.dataBaseProgress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataBaseProgress.Name = "dataBaseProgress";
-            this.dataBaseProgress.Size = new System.Drawing.Size(100, 23);
+            this.dataBaseProgress.Size = new System.Drawing.Size(67, 15);
             this.dataBaseProgress.TabIndex = 3;
             // 
             // picBox
             // 
             this.picBox.Image = global::MovieDatabase.Properties.Resources.camera;
             this.picBox.InitialImage = global::MovieDatabase.Properties.Resources.camera;
-            this.picBox.Location = new System.Drawing.Point(190, 149);
+            this.picBox.Location = new System.Drawing.Point(112, 102);
+            this.picBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(161, 210);
+            this.picBox.Size = new System.Drawing.Size(150, 136);
             this.picBox.TabIndex = 4;
             this.picBox.TabStop = false;
             // 
             // newCustomerButton
             // 
-            this.newCustomerButton.Location = new System.Drawing.Point(168, 34);
+            this.newCustomerButton.Location = new System.Drawing.Point(112, 22);
+            this.newCustomerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newCustomerButton.Name = "newCustomerButton";
-            this.newCustomerButton.Size = new System.Drawing.Size(217, 74);
+            this.newCustomerButton.Size = new System.Drawing.Size(145, 48);
             this.newCustomerButton.TabIndex = 5;
-            this.newCustomerButton.Text = "New Customer";
+            this.newCustomerButton.Text = "Update Movies";
             this.newCustomerButton.UseVisualStyleBackColor = true;
+            this.newCustomerButton.Click += new System.EventHandler(this.newCustomerButton_Click);
             // 
             // MovieForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 685);
+            this.ClientSize = new System.Drawing.Size(378, 445);
             this.Controls.Add(this.newCustomerButton);
             this.Controls.Add(this.picBox);
             this.Controls.Add(this.dataBaseProgress);
@@ -107,6 +114,7 @@ namespace MovieDatabase
             this.Controls.Add(this.getMovieButton);
             this.Controls.Add(this.addMovieButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MovieForm";
             this.Text = "Movies";
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
