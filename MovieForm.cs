@@ -34,5 +34,16 @@ namespace MovieDatabase
             BuyMovieForm form = new BuyMovieForm();
             form.Show();
         }
+
+        private void newCustomerButton_Click(object sender, EventArgs e)
+        {
+            UpdateMovieForm form = new UpdateMovieForm();
+            form.Show();
+        }
+
+        private void MovieForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
