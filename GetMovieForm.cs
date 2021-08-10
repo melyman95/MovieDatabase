@@ -19,7 +19,11 @@ namespace MovieDatabase
 
         private void movieInfoButton_Click(object sender, EventArgs e)
         {
+            MovieContext context = new MovieContext();
 
+
+            var infoMovie = context.Movies.Where(m => m.Title == movieListBox.Text).FirstOrDefault();
+            MessageBox.Show("Title: " + infoMovie.Title + "\n" + "Release Year: " + infoMovie.releaseYear.ToString() + "\n" + "Rating: " + infoMovie.Rating + "\n" + "Genre: " + infoMovie.Genre + "\n" + "Runtime: " + infoMovie.Runtime.ToString() + "\n" + "Price: " + infoMovie.Price.ToString());
         }
 
 

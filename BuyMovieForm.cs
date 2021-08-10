@@ -30,7 +30,7 @@ namespace MovieDatabase
 
 
 
-            DialogResult confirm = MessageBox.Show(movieListBox.Text + " was delted!");
+            DialogResult confirm = MessageBox.Show("You have bought: " + movieListBox.Text+ "!");
             this.Close();
 
 
