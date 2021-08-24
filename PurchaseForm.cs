@@ -16,5 +16,11 @@ namespace MovieDatabase
         {
             InitializeComponent();
         }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have succesfully bought the movie!");
+            this.Close();
+        }
     }
 }
