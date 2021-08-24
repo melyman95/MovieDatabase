@@ -20,7 +20,7 @@ namespace MovieDatabase
 
         public int Runtime { get; set; }
 
-        public decimal Price { get; set; }
+        public float Price { get; set; }
 
         public override string ToString()
         {

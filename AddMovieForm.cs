@@ -89,7 +89,7 @@ namespace MovieDatabase
                 addedMovie.Rating = ratingBox.Text;
                 addedMovie.Genre = genreBox.Text;
                 addedMovie.Runtime = int.Parse(runtimeBox.Text);
-                addedMovie.Price = decimal.Parse(priceBox.Text);
+                addedMovie.Price = float.Parse(priceBox.Text);
 
                 //adding movie object to database
                 context.Movies.Add(addedMovie);
