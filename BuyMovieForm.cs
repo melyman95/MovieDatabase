@@ -30,9 +30,9 @@ namespace MovieDatabase
 
 
 
-            DialogResult confirm = MessageBox.Show("You have bought: " + movieListBox.Text+ "!");
+            PurchaseForm form = new PurchaseForm();
+            form.Show();
             this.Close();
-
 
 
 
