@@ -76,7 +76,7 @@ namespace MovieDatabase
             }
             else
             {
-                decimal.TryParse(priceBox.Text, out decimal result);
+                float.TryParse(priceBox.Text, out float result);
                 selectedMovie.Price = result;
                  
             }
