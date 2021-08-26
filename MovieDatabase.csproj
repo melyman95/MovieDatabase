@@ -96,6 +96,15 @@
     <Compile Include="GetMovieForm.Designer.cs">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108062224325_InitialCreate.cs" />
+    <Compile Include="Migrations\202108062224325_InitialCreate.designer.cs">
+      <DependentUpon>202108062224325_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108260238341_reset.cs" />
+    <Compile Include="Migrations\202108260238341_reset.designer.cs">
+      <DependentUpon>202108260238341_reset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieContext.cs" />
     <Compile Include="MovieForm.cs">
@@ -127,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GetMovieForm.resx">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108062224325_InitialCreate.resx">
+      <DependentUpon>202108062224325_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108260238341_reset.resx">
+      <DependentUpon>202108260238341_reset.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
