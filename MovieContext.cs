@@ -24,6 +24,7 @@ namespace MovieDatabase
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual DbSet<Movie> Movies { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
     }
 
     //public class MyEntity

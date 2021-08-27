@@ -104,6 +104,10 @@
     <Compile Include="Migrations\202108260238341_reset.designer.cs">
       <DependentUpon>202108260238341_reset.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108272042094_OrderClass.cs" />
+    <Compile Include="Migrations\202108272042094_OrderClass.designer.cs">
+      <DependentUpon>202108272042094_OrderClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieContext.cs" />
@@ -143,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108260238341_reset.resx">
       <DependentUpon>202108260238341_reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108272042094_OrderClass.resx">
+      <DependentUpon>202108272042094_OrderClass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
