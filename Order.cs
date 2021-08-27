@@ -13,11 +13,11 @@ namespace MovieDatabase
         public int OrderId { get; set; }
         
         public string MovieTitle { get; set; }
-        [ForeignKey("MovieTitle")]
-        public virtual Movie Movie { get; set; }
+        // [ForeignKey("MovieTitle")]
+       // public virtual Movie Movie { get; set; }
         public string ShippingName { get; set; }
 
-        public int CardNumber { get; set; }
+        public string CardNumber { get; set; }
 
         public int Cvv { get; set; }
         public string ExpDate { get; set; }
