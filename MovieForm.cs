@@ -31,7 +31,7 @@ namespace MovieDatabase
 
         private void buyMovieButton_Click(object sender, EventArgs e)
         {
-            BuyMovieForm form = new BuyMovieForm();
+            PurchaseForm form = new PurchaseForm();
             form.Show();
         }
 

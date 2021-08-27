@@ -112,6 +112,14 @@
     <Compile Include="Migrations\202108272113127_OrderForiegnKey.designer.cs">
       <DependentUpon>202108272113127_OrderForiegnKey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108272200031_fkremoved.cs" />
+    <Compile Include="Migrations\202108272200031_fkremoved.designer.cs">
+      <DependentUpon>202108272200031_fkremoved.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108272202318_cardnumbertostring.cs" />
+    <Compile Include="Migrations\202108272202318_cardnumbertostring.designer.cs">
+      <DependentUpon>202108272202318_cardnumbertostring.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
     <Compile Include="MovieContext.cs" />
@@ -157,6 +165,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108272113127_OrderForiegnKey.resx">
       <DependentUpon>202108272113127_OrderForiegnKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108272200031_fkremoved.resx">
+      <DependentUpon>202108272200031_fkremoved.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108272202318_cardnumbertostring.resx">
+      <DependentUpon>202108272202318_cardnumbertostring.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
