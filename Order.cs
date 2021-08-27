@@ -23,5 +23,6 @@ namespace MovieDatabase
         public string BillingAddress { get; set; }
         public string PhoneNumber { get; set; }
         public string ShippingAddress { get; set; }
+        public bool IsFullFilled { get; set; }
     }
 }
