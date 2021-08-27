@@ -11,9 +11,10 @@ namespace MovieDatabase
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderId { get; set; }
-        [ForeignKey("Movie")]
+        
         public string MovieTitle { get; set; }
-        public Movie Movie { get; set; }
+        [ForeignKey("MovieTitle")]
+        public virtual Movie Movie { get; set; }
         public string ShippingName { get; set; }
 
         public int CardNumber { get; set; }
