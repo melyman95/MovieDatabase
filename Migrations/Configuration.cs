@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MovieDatabase.MovieContext";
         }
 
         protected override void Seed(MovieDatabase.MovieContext context)

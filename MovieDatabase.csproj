@@ -96,29 +96,9 @@
     <Compile Include="GetMovieForm.Designer.cs">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202108062224325_InitialCreate.cs" />
-    <Compile Include="Migrations\202108062224325_InitialCreate.designer.cs">
-      <DependentUpon>202108062224325_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108260238341_reset.cs" />
-    <Compile Include="Migrations\202108260238341_reset.designer.cs">
-      <DependentUpon>202108260238341_reset.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108272042094_OrderClass.cs" />
-    <Compile Include="Migrations\202108272042094_OrderClass.designer.cs">
-      <DependentUpon>202108272042094_OrderClass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108272113127_OrderForiegnKey.cs" />
-    <Compile Include="Migrations\202108272113127_OrderForiegnKey.designer.cs">
-      <DependentUpon>202108272113127_OrderForiegnKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108272200031_fkremoved.cs" />
-    <Compile Include="Migrations\202108272200031_fkremoved.designer.cs">
-      <DependentUpon>202108272200031_fkremoved.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202108272202318_cardnumbertostring.cs" />
-    <Compile Include="Migrations\202108272202318_cardnumbertostring.designer.cs">
-      <DependentUpon>202108272202318_cardnumbertostring.cs</DependentUpon>
+    <Compile Include="Migrations\202108311019225_initial.cs" />
+    <Compile Include="Migrations\202108311019225_initial.designer.cs">
+      <DependentUpon>202108311019225_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Movie.cs" />
@@ -154,23 +134,8 @@
     <EmbeddedResource Include="GetMovieForm.resx">
       <DependentUpon>GetMovieForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108062224325_InitialCreate.resx">
-      <DependentUpon>202108062224325_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108260238341_reset.resx">
-      <DependentUpon>202108260238341_reset.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108272042094_OrderClass.resx">
-      <DependentUpon>202108272042094_OrderClass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108272113127_OrderForiegnKey.resx">
-      <DependentUpon>202108272113127_OrderForiegnKey.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108272200031_fkremoved.resx">
-      <DependentUpon>202108272200031_fkremoved.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202108272202318_cardnumbertostring.resx">
-      <DependentUpon>202108272202318_cardnumbertostring.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202108311019225_initial.resx">
+      <DependentUpon>202108311019225_initial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovieForm.resx">
       <DependentUpon>MovieForm.cs</DependentUpon>
