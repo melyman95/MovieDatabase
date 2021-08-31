@@ -18,147 +18,70 @@ namespace MovieDatabase
             InitializeComponent();
         }
 
+        // Regular expression used to validate a phone number.  
+        public const string motif = @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+
         private void orderButton_Click(object sender, EventArgs e)
         {
-            MovieContext context = new MovieContext();
-            // Get selected Movie
-            var selectedMovie = context.Movies.Where(m => m.Title == movieListBox.Text).FirstOrDefault();
-            // Add Order object
-            Order addedOrder = new Order();
-            addedOrder.MovieTitle = movieListBox.Text;
-            addedOrder.ShippingName = firstNameBox.Text + " " + lastNameBox.Text;
-            addedOrder.CardNumber = cardnumberBox.Text;
-            addedOrder.Cvv = int.Parse(cvvBox.Text);
-            addedOrder.ExpDate = expBox.Text;
-            addedOrder.BillingAddress = billingAddressBox.Text;
-            addedOrder.PhoneNumber = phoneNumberBox.Text;
-            addedOrder.ShippingAddress = shippingAddressBox.Text;
-
-
-            if (ValidTitle() == true && ValidShippingFirstName() == true && ValidShippingLastName() == true
-                && IsCreditCardInfoValid(cardnumberBox.Text, expBox.Text, cvvBox.Text) == true
-                && ValidShippingAddress() == true && ValidPhoneNumber(phoneNumberBox.Text) == true
-                && ValidBillingAddress() == true)
+            if (NoEmptyFields())
             {
-                context.Orders.Add(addedOrder);
+                if (IsPhoneNumber(phoneNumberBox.Text) && isNumber(cvvBox.Text))
+                {
+                    MovieContext context = new MovieContext();
+                    // Get selected Movie
+                    var selectedMovie = context.Movies.Where(m => m.Title == movieListBox.Text).FirstOrDefault();
+                    // Add Order object
+                    Order addedOrder = new Order();
+                    addedOrder.MovieTitle = movieListBox.Text;
+                    addedOrder.ShippingName = firstNameBox.Text + " " + lastNameBox.Text;
+                    addedOrder.CardNumber = cardnumberBox.Text;
+                    addedOrder.Cvv = int.Parse(cvvBox.Text);
+                    addedOrder.ExpDate = expBox.Text;
+                    addedOrder.BillingAddress = billingAddressBox.Text;
+                    addedOrder.PhoneNumber = phoneNumberBox.Text;
+                    addedOrder.ShippingAddress = shippingAddressBox.Text;
 
-                // Delete movie and save changes
-                context.Movies.Remove(selectedMovie);
-                context.SaveChanges();
+                    context.Orders.Add(addedOrder);
 
-                DialogResult confirm = MessageBox.Show("You Bought " + selectedMovie.Title + "!");
-                this.Close();
+                    // Delete movie and save changes
+                    context.Movies.Remove(selectedMovie);
+                    context.SaveChanges();
+
+                    DialogResult confirm = MessageBox.Show("You Bought " + selectedMovie.Title + "!");
+                    this.Close();
+                }
+                else if (!IsPhoneNumber(phoneNumberBox.Text) || !isNumber(cvvBox.Text)) 
+                {
+                    MessageBox.Show("Your phone number or CVV are invalid.", "Whoops!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private bool ValidTitle()
+        public bool NoEmptyFields()
         {
-            ErrorProvider error = new ErrorProvider();
-            bool valid = true;
-            if (movieListBox.Text == "")
+            foreach(var control in Controls)
             {
-                error.SetError(movieListBox, "Please enter a title.");
-                valid = false;
+                if (control is TextBox)
+                {
+                    var textbox = (TextBox)control;
+                    if (String.IsNullOrWhiteSpace(textbox.Text)) {
+                        MessageBox.Show("One or more fields are empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textbox.Text = String.Empty;
+                        return false;
+                    }
+                }
             }
-            else
-            {
-                error.SetError(movieListBox, "");
-            }
-            return valid;
+            return true;
         }
 
-        private bool ValidShippingFirstName()
+        public bool isNumber(string s) 
         {
-            ErrorProvider error = new ErrorProvider();
-            bool valid = true;
-            if (firstNameBox.Text == "")
-            {
-                error.SetError(firstNameBox, "Please enter a first name.");
-                valid = false;
-            }
-            else
-            {
-                error.SetError(firstNameBox, "");
-            }
-            return valid;
+            return s.All(char.IsDigit);
         }
 
-        private bool ValidShippingLastName()
+        public static bool IsPhoneNumber(string num) 
         {
-            ErrorProvider error = new ErrorProvider();
-            bool valid = true;
-            if (lastNameBox.Text == "")
-            {
-                error.SetError(lastNameBox, "Please enter a last name.");
-                valid = false;
-            }
-            else
-            {
-                error.SetError(lastNameBox, "");
-            }
-            return valid;
-        }
-
-        public static bool IsCreditCardInfoValid(string cardNo, string expiryDate, string cvv)
-        {
-            var cardCheck = new Regex(@"^(1298|1267|4512|4567|8901|8933)([\-\s]?[0-9]{4}){3}$");
-            var monthCheck = new Regex(@"^(0[1-9]|1[0-2])$");
-            var yearCheck = new Regex(@"^20[0-9]{2}$");
-            var cvvCheck = new Regex(@"^\d{3}$");
-
-            if (!cardCheck.IsMatch(cardNo)) // <1>check card number is valid
-                return false;
-            if (!cvvCheck.IsMatch(cvv)) // <2>check cvv is valid as "999"
-                return false;
-
-            var dateParts = expiryDate.Split('/'); //expiry date in from MM/yyyy            
-            if (!monthCheck.IsMatch(dateParts[0]) || !yearCheck.IsMatch(dateParts[1])) // <3 - 6>
-                return false; // ^ check date format is valid as "MM/yyyy"
-
-            var year = int.Parse(dateParts[1]);
-            var month = int.Parse(dateParts[0]);
-            var lastDateOfExpiryMonth = DateTime.DaysInMonth(year, month); //get actual expiry date
-            var cardExpiry = new DateTime(year, month, lastDateOfExpiryMonth, 23, 59, 59);
-
-            //check expiry greater than today & within next 6 years <7, 8>>
-            return (cardExpiry > DateTime.Now && cardExpiry < DateTime.Now.AddYears(6));
-        }
-
-        private bool ValidShippingAddress()
-        {
-            ErrorProvider error = new ErrorProvider();
-            bool valid = true;
-            if (shippingAddressBox.Text == "")
-            {
-                error.SetError(shippingAddressBox, "Please enter a shipping address.");
-                valid = false;
-            }
-            else
-            {
-                error.SetError(shippingAddressBox, "");
-            }
-            return valid;
-        }
-
-        private bool ValidPhoneNumber(string number)
-        {
-            return Regex.Match(number, @"^(\+[0-9]{9})$").Success;
-        }
-
-        private bool ValidBillingAddress()
-        {
-            ErrorProvider error = new ErrorProvider();
-            bool valid = true;
-            if (billingAddressBox.Text == "")
-            {
-                error.SetError(billingAddressBox, "Please enter a shipping address.");
-                valid = false;
-            }
-            else
-            {
-                error.SetError(billingAddressBox, "");
-            }
-            return valid;
+            return Regex.IsMatch(num, motif);
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
